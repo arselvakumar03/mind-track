@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+  db:
+    image: postgres:18
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: p@ssw0rd
+      POSTGRES_DB: mindTrack
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5433:5433"
+
+  api:
+    build: .
+    depends_on:
+      - db
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql://postgres:passw0rd123@192.168.0.6:5432/mindTrack
+    volumes:
+      - .:/app
+
+volumes:
+  pgdata:
