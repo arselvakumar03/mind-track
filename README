@@ -1,0 +1,28 @@
+Mind Track - Personal Wellness & Habit Tracker
+
+Build a personalized wellness tracker app that helps users track habits, moods, and goals
+
+application stack
+FAST API + JWT token and postgress DB
+
+Installation
+1. Clone repository
+  git clone https://github.com/arselvakumar03/mind-track.git
+  cd mindtracker
+
+2. Install make in bash if not done
+    pacman -S make
+
+3. Make sure the postgress db ready
+
+4. by using makefile run belo command
+  make init
+5. run the proejct
+   make run
+
+6. access the project as below
+  http://127.0.0.1:8000/docs#/
+
+7. access and run the project in postman
+  http://127.0.0.1:8000/auth/register
+  http://127.0.0.1:8000/auth/login
